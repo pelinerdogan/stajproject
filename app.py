@@ -7,7 +7,7 @@ app = Flask(__name__)
 client = MongoClient('mongodb://mongodb:27017/')
 db = client['your_database']
 collection = db['your_collection']
-print("hi")
+
 @app.route('/item/<item_id>', methods=['GET'])
 def get_item(item_id):
     item = collection.find_one({'_id': item_id})
