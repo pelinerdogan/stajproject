@@ -6,11 +6,10 @@ services:
     container_name: mongodb
     ports:
       - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
+
 
   flask-app:
-   #build: .
+    image: pelinerdogan/flask-app
     container_name: flask-app
     ports:
       - "8080:8080"
@@ -21,6 +20,4 @@ services:
       - FLASK_RUN_HOST=0.0.0.0
       - FLASK_RUN_PORT=8080
 
-volumes:
-  mongo-data:
 
