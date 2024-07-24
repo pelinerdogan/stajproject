@@ -10,7 +10,7 @@ services:
       - mongo-data:/data/db
 
   flask-app:
-    build: .
+   #build: .
     container_name: flask-app
     ports:
       - "8080:8080"
